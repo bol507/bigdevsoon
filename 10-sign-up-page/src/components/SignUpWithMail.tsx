@@ -1,6 +1,5 @@
 import InputWithLabel from './InputWithLabel'
 import './SignUpWithMail.css'
-import iconsSvg from '/src/assets/icons.svg';
 
 const SignUpWithMail = () => {
 
@@ -25,7 +24,7 @@ const SignUpWithMail = () => {
       </div>
       <button className="button mt-auto" >
           <svg className="icon">
-            <use xlinkHref={`${iconsSvg}#icon-google`}></use>
+          <use href="/icons.svg#icon-google"></use>
           </svg>
           Sign up with Google
       </button>

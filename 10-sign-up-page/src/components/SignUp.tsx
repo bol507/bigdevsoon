@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./SignUp.css";
-import iconsSvg from '/src/assets/icons.svg';
+
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -16,13 +16,13 @@ const SignUp = () => {
       <div className="button-container">
         <button className="button">
           <svg className="icon">
-            <use xlinkHref={`${iconsSvg}#icon-google`}></use>
+            <use href="/icons.svg#icon-google"></use>
           </svg>
           Sign up with Google
         </button>
         <button className="button button-dark" onClick={handleMailSignUp}>
           <svg className="icon">
-            <use xlinkHref={`${iconsSvg}#icon-mail`}></use>
+            <use href="/icons.svg#icon-mail"></use>
           </svg>
           Sign up with Email
         </button>
