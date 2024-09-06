@@ -14,7 +14,7 @@ const SignUpWithMail = () => {
       <div className="input-container">
         <InputWithLabel label="Name" />
         <InputWithLabel label="Email" />
-        <InputWithLabel label="Password" />
+        <InputWithLabel label="Password" type="password" />
       </div>
       <button className="button button-dark" onClick={handleSignUp}>
           Sign up
@@ -25,7 +25,7 @@ const SignUpWithMail = () => {
       </div>
       <button className="button mt-auto" >
           <svg className="icon">
-            <use href={`${iconsSvg}#icon-google`}></use>
+            <use xlinkHref={`${iconsSvg}#icon-google`}></use>
           </svg>
           Sign up with Google
       </button>

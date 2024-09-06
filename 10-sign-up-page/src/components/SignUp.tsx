@@ -16,13 +16,13 @@ const SignUp = () => {
       <div className="button-container">
         <button className="button">
           <svg className="icon">
-            <use href={`${iconsSvg}#icon-google`}></use>
+            <use xlinkHref={`${iconsSvg}#icon-google`}></use>
           </svg>
           Sign up with Google
         </button>
         <button className="button button-dark" onClick={handleMailSignUp}>
           <svg className="icon">
-            <use href={`${iconsSvg}#icon-mail`}></use>
+            <use xlinkHref={`${iconsSvg}#icon-mail`}></use>
           </svg>
           Sign up with Email
         </button>
