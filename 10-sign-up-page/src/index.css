@@ -1,0 +1,57 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  --bg--primary-color: #f2f2f2;
+  --bg-root: #e6e7f0;
+  --button-dark: #27334c;
+  --text-gray: #808080;
+}
+
+.button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 3.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+
+.button-dark{   
+  background-color: var(--button-dark);
+  color: white;
+}
+
+.icon{
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.divider {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+
+  & span {
+    font-weight: 400; 
+    color: var(--text-gray);
+    font-size: 1.25rem; 
+  }
+}
+
+.divider::before, .divider::after {
+  flex: 1;
+  content: '';
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
