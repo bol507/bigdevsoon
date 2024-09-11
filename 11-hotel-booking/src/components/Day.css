@@ -1,0 +1,29 @@
+.day {
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+  
+.day:hover {
+  background: #f0f0f0;
+}
+
+
+.check-in {
+  background: #ff8a00; /* Color para check-in */
+  color: white; /* Color del texto */
+}
+  
+.check-out {
+  background: #ff8a00; /* Color para check-out */
+  color: white; /* Color del texto */
+}
+  
+.in-range {
+  background: #d3d3d3; /* Color gris para el rango */
+  color: black; /* Color del texto */
+}
+  
+.empty {
+  visibility: hidden; /* Ocultar días vacíos */
+}
