@@ -1,0 +1,107 @@
+#root {
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  max-width: 1280px;
+  background-color: #e7b389;
+  margin: auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container{
+  display:flex;
+  width: 82%;
+  height: auto;
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0px 3px 20px -5px rgba(0,0,0,0.75);
+  padding:2rem;
+  gap: 1rem;
+
+  & .panel1{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    & .button-book-room{
+      border-radius: 2rem;
+      height: 3.5rem;
+      margin-top:auto;
+      background-color: var(--primary-color);
+      border-color: transparent;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover{
+        background-color: var(--primary-color-dark);
+      }
+    }
+  }
+  & .panel2{
+    width: 60%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    gap:1rem;
+
+    & .image-container {
+      position: relative;
+
+      &  img {
+        width: 100%; /* Ajusta según sea necesario */
+        height: auto; /* Mantiene proporciones */
+      }
+      
+      & .description {
+        position: absolute;
+        bottom: 10px; /* Espacio desde el fondo */
+        left: 10px; /* Espacio desde la izquierda */
+        color: white; /* Color del texto */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+        padding: 5px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        width: auto; /* Ajusta según sea necesario */
+      }
+      
+      & .location {
+        display: flex;
+        align-items: center; /* Para que el símbolo de ubicación esté en una nueva línea */
+        margin-top: 5px; /* Espacio superior */
+      }
+      & .location-icon {
+        width: 1.0rem; /* Ajusta el tamaño según sea necesario */
+        height: 1.0rem;
+        margin-right: 10px; /* Ajusta el tamaño según sea necesario */
+      }
+    }
+    
+   
+
+    & .thumb-container {
+      display: grid; /* Usar grid para organizar imágenes */
+      grid-template-columns: repeat(3, 200px); /* Tres columnas de 100px */
+      gap: 10px; /* Espacio entre imágenes */
+     
+
+      & img {
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+      }
+    }
+  }
+}
+

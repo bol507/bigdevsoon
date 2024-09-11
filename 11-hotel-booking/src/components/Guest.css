@@ -1,0 +1,29 @@
+.guest-selector {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los selectores */
+  align-items: center;
+  gap:0.625rem;
+}
+  
+.guest-group {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+
+  & label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  & select {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: #e4e4e4;
+    color: #9c9c9c;
+    border-radius: 12px;
+    height: max-content;
+  }
+}
