@@ -21,7 +21,7 @@ const DatePicker: React.FC<DatePickerProps> = ({ onDateChange, checkInDate, chec
   };
 
   const renderMonthYear = () => {
-    const options = { month: 'long', year: 'numeric' };
+    const options: Intl.DateTimeFormatOptions = { month: 'long', year: 'numeric' };
     return (
       <div className="month-year">
         <button onClick={handlePrevMonth}>&lt;</button>
@@ -58,11 +58,10 @@ const DatePicker: React.FC<DatePickerProps> = ({ onDateChange, checkInDate, chec
 
      // Rellenar los días del mes
     for (let day = 1; day <= lastDay.getDate(); day++) {
-      const date = new Date(year, month, day);
-      const isCheckIn = checkInDate && date.toISOString().split('T')[0] === checkInDate;
-      const isCheckOut = checkOutDate && date.toISOString().split('T')[0] === checkOutDate;
-      const isInRange = checkInDate && checkOutDate && date > new Date(checkInDate) && date < new Date(checkOutDate);
-      
+      const date = new Date(year, month, day); // Definición de date aquí
+      const isCheckIn = checkInDate ? date.toISOString().split('T')[0] === checkInDate : false;
+const isCheckOut = checkOutDate ? date.toISOString().split('T')[0] === checkOutDate : false;
+const isInRange = checkInDate && checkOutDate ? date > new Date(checkInDate) && date < new Date(checkOutDate) : false;      
       days.push(
         <Day 
           key={day} 
