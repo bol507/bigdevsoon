@@ -28,6 +28,12 @@ const Done = () => {
   ]
   return (
     <section className="space-y-5">
+      <div className="flex items-center">
+        <h2 className="text-xl font-bold">Done</h2>
+        <button className="ml-4 text-2xl font-bold text-zinc-500 hover:text-zinc-700 transition-all duration-300 ease-in-out">
+          +
+        </button>
+      </div>
       <Card priority={taskList[0].priority} date={taskList[0].date} title={taskList[0].title} content={taskList[0].content} avatars={taskList[0].avatars} />
       <Card priority={taskList[1].priority} date={taskList[1].date} image={taskList[1].image} title={taskList[1].title} content={taskList[1].content} avatars={taskList[1].avatars} />
     </section>
