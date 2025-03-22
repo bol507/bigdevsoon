@@ -1,4 +1,13 @@
-const OrderSummary = () => {
+interface OrderSummaryProps {
+  subTotal: number;
+  tax: number;
+  shipping: number;
+  total: number;
+}
+
+const OrderSummary = ({subTotal,tax,shipping,total}:OrderSummaryProps) => {
+ 
+
   return (
     <div className="flex flex-col w-full h-fit border border-zinc-200 rounded-xl shadow-md bg-white  ">
       <div className="w-full p-8 space-y-6">
@@ -8,15 +17,15 @@ const OrderSummary = () => {
         <div className="flex flex-col w-full h-auto space-y-5">
           <div className="flex  w-full h-auto items-center justify-between">
             <span className="text-xl">Subtotal</span>
-            <p className="text-xl font-bold">$12.99</p>
+            <p className="text-xl font-bold">${subTotal.toFixed(2)}</p>
           </div>
           <div className="flex  w-full h-auto items-center justify-between">
             <span className="text-xl">Tax</span>
-            <p className="text-xl font-bold">$2.99</p>
+            <p className="text-xl font-bold">${tax.toFixed(2)}</p>
           </div>
           <div className="flex  w-full h-auto items-center justify-between">
             <span className="text-xl">Shipping</span>
-            <p className="text-xl font-bold">$0.99</p>
+            <p className="text-xl font-bold">${shipping.toFixed(2)}</p>
           </div>
         </div>
       </div>
@@ -24,7 +33,7 @@ const OrderSummary = () => {
       <div className="p-8 space-y-6">
         <div className="flex  w-full h-auto items-center justify-between">
           <span className="text-2xl font-bold">Total</span>
-          <p className="text-2xl font-bold">$92.84</p>
+          <p className="text-2xl font-bold">${total.toFixed(2)}</p>
         </div>
         <button className=" bg-black text-white w-full rounded h-12 text-xl">
           Pay now
