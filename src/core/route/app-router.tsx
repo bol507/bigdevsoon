@@ -1,5 +1,6 @@
 import { lazy, ReactNode, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
+import ShoppingList from "../../features/shopping-list/pages/shopping-list";
 
 const AppLayout = lazy(() => import("../../shared/layouts/app-layout"));
 const HomePage = lazy(() => import("../../features/home/pages/home"));
@@ -37,7 +38,11 @@ export const AppRouter = ({ children }: AppRouterProps) => {
               <TaskBoardPage />
             </Suspense>
             } />
-        
+          <Route path="shopping-list" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ShoppingList />
+            </Suspense>
+            } />
         </Route>
       </Routes>
       {children}
