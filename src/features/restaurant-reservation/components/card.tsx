@@ -6,7 +6,7 @@ const Card = () => {
   
 
   return (
-    <div className="flex flex-col w-[380px] h-[600px] bg-white rounded-xl shadow-md border border-zinc-800 justify-between">
+    <div className="flex flex-col w-[80%] md:w-[380px] h-[600px] bg-white rounded-xl shadow-md border border-zinc-800 justify-between">
       <Carrousel />
       <div className="flex items-center justify-between p-4 ">
         <div className="flex flex-col items-start">
