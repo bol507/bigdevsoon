@@ -23,12 +23,35 @@ const ShoppingList = () => {
     setTotal(subTotal + calculatedShipping + calculatedTax);
   }, [subTotal]);
   return (
-    <section className="w-screen h-screen bg-zinc-200 text-zinc-900 p-12 grid justify-items-center overflow-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-6 justify-items-center">
-        <ProductList items={items} setItems={setItems} subTotal={subTotal} setSubTotal={setSubTotal} />
-        <div className="flex flex-col w-full h-auto space-y-6">
-          <OrderSummary subTotal={subTotal}  tax={tax} shipping={shipping} total={total} />
-          <PromoCode />
+    <section className="relative w-screen h-screen text-zinc-900 p-4 md:p-12 overflow-auto">
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1601049676869-702ea24cfd58?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      <div className="absolute inset-0  backdrop-blur-sm" />
+      <div className="relative z-10 grid justify-items-center h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 justify-items-center">
+          <ProductList
+            items={items}
+            setItems={setItems}
+            subTotal={subTotal}
+            setSubTotal={setSubTotal}
+          />
+          <div className="flex flex-col w-full h-auto space-y-6">
+            <OrderSummary
+              subTotal={subTotal}
+              tax={tax}
+              shipping={shipping}
+              total={total}
+            />
+            <PromoCode />
+          </div>
         </div>
       </div>
     </section>
