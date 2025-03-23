@@ -23,7 +23,7 @@ const ShoppingList = () => {
     setTotal(subTotal + calculatedShipping + calculatedTax);
   }, [subTotal]);
   return (
-    <section className="relative w-screen h-screen text-zinc-900 p-4 md:p-12 overflow-auto">
+    <section className="relative w-screen h-screen text-zinc-900 p-2 md:p-12 overflow-auto">
       <div
         className="absolute inset-0"
         style={{
@@ -36,7 +36,7 @@ const ShoppingList = () => {
 
       <div className="absolute inset-0  backdrop-blur-sm" />
       <div className="relative z-10 grid justify-items-center h-full">
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-6 justify-items-center">
+        <div className="grid grid-cols-1 w-full md:w-auto md:grid-cols-2 gap-6 justify-items-center">
           <ProductList
             items={items}
             setItems={setItems}
