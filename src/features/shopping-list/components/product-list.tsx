@@ -47,9 +47,9 @@ const ProductList = ({items, setItems, subTotal, setSubTotal}:ProductListProps) 
   };
  
   return (
-    <div className="flex flex-col w-full h-auto border border-zinc-200 rounded-xl shadow-md bg-white p-8 space-y-6">
-      <div className="w-full h-auto flex  items-center justify-between">
-        <h1 className="text-2xl font-bold">Your product list</h1>
+    <div className="flex flex-col w-full h-auto border border-zinc-200 rounded-xl shadow-md bg-white p-4 md:p-8 space-y-6">
+      <div className="flex flex-col md:flex-row w-full h-auto  items-center justify-between">
+        <h1 className="text-xl md:text-2xl font-bold">Your product list</h1>
         <span>{items} items</span>
       </div>
       <div className="flex flex-col w-full h-auto space-y-6">
