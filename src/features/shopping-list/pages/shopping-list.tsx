@@ -36,7 +36,7 @@ const ShoppingList = () => {
 
       <div className="absolute inset-0  backdrop-blur-sm" />
       <div className="relative z-10 grid justify-items-center h-full">
-        <div className="grid grid-cols-1 w-full md:w-auto md:grid-cols-2 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 w-full md:w-auto md:grid-cols-2 gap-6 justify-items-center pb-4">
           <ProductList
             items={items}
             setItems={setItems}
