@@ -7,6 +7,7 @@ const Home = () => {
       <Link to="/restaurant-reservation">#12 Go to restaurant reservation</Link>
       <Link to="/task-board">#13 Go to task board</Link>
       <Link to="/shopping-list">#14 Go to shopping list</Link>
+      <Link to="/notifications">#15 Go to notifications</Link>
 
     </div>
   )
